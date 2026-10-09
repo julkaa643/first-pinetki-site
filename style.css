@@ -214,3 +214,138 @@ details.card summary::-webkit-details-marker {
   color: #0056b3;
 }
 
+
+/* Базовые настройки для мобильных */
+@media (max-width: 768px) {
+  /* Hero-блок */
+  .hero {
+    height: 60vh; /* Чуть меньше, чем на десктопе, но сохраняет эффект */
+    padding: 20px;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 28px; /* Уменьшаем заголовок */
+  }
+
+  .podzagolovok {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  /* Текст + изображения */
+  .text-and-image {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .text-block ol {
+    padding-left: 20px; /* Отступ для маркеров списка */
+  }
+
+  .text-block li {
+    margin-bottom: 20px;
+    font-size: 18px; /* Чуть уменьшаем текст пунктов */
+  }
+
+  .images-block {
+    flex-direction: column; /* Картинки друг под другом */
+    align-items: center;
+  }
+
+  .product-img,
+  .sinie {
+    width: 100%; /* На всю ширину контейнера */
+    max-width: 320px; /* Ограничиваем максимальную ширину */
+    height: auto;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    display: block;
+  }
+
+  /* Call-to-action */
+  .call-to-action {
+    padding: 20px;
+  }
+}
+
+/* Ещё более узкие экраны (до 480px) — дополнительно уменьшаем шрифты и отступы */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .podzagolovok {
+    font-size: 16px;
+  }
+
+  p, ol, li {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-and-image {
+    padding: 20px 15px;
+  }
+
+  .product-img,
+  .sinie {
+    max-width: 100%; /* Можно на всю ширину, если нужно */
+  }
+}
+
+/* Каталог (сетка карточек) — адаптивная сетка */
+@media (max-width: 768px) {
+  .catalog {
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Карточки чуть уже */
+    gap: 20px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 200px; /* Фиксированная высота для единообразия */
+  }
+
+  .card-summary {
+    padding: 15px;
+  }
+
+  .card-details {
+    padding: 15px;
+  }
+}
